@@ -13,23 +13,6 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
 
 
-fun Int.isOdd()  = this % 2 ==0
-fun Int.isEven() = !isOdd()
-
-
-fun test(x: Int){
-   val isOdd = x.isOdd()
-    val isEven = x.isEven()
-}
-
-fun test2(context: Context){
-    context.toast("hi kt extensions",Toast.LENGTH_LONG)
-
-}
-
-fun Context.toast(message: String,duration: Int = Toast.LENGTH_SHORT){
-    Toast.makeText(this,message,duration).show()
-}
 
 fun test3(viewGroup: ViewGroup,@LayoutRes layoutRes: Int){
 
@@ -78,6 +61,10 @@ fun test4(context: Context){
 fun TextView.apply2(body: TextView.() -> Unit) : TextView{
     body(this)
     return this
+}
+
+fun main(){
+
 }
 
 
